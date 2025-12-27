@@ -339,7 +339,7 @@
 </head>
 <body>
     <!-- Botão Flutuante do WhatsApp (com animação de flutuar) -->
-    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de um orçamento para toldos/coberturas." class="btn whatsapp-btn" target="_blank">
+    <a href="https://wa.me/5514997388424?text=Olá! Gostaria de um orçamento para toldos/coberturas." class="btn whatsapp-btn" target="_blank">
         <i class="fab fa-whatsapp"></i>
         <span>Solicitar Orçamento</span>
     </a>
@@ -370,7 +370,7 @@
         <div class="container">
             <h1>Proteção e Conforto para Sua Casa </h1>
             <p>Especialistas em toldos e coberturas personalizadas. Mais de 15 anos trazendo qualidade, durabilidade e elegância para o seu lar.</p>
-            <a href="https://wa.me/5511999999999?text=Olá! Gostaria de solicitar um orçamento para toldos/coberturas." class="btn" target="_blank">
+            <a href="https://wa.me/5514997388424?text=Olá! Gostaria de solicitar um orçamento para toldos/coberturas." class="btn" target="_blank">
                 <i class="fab fa-whatsapp"></i> Falar com Especialista
             </a>
         </div>
@@ -495,14 +495,14 @@
                         <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div>
                             <h3>Atendemos em Toda a Região</h3>
-                            <p>Grande São Paulo e interior.</p>
+                            <p>Estado sp todo.</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
                         <div>
                             <h3>Telefone / WhatsApp</h3>
-                            <p>(11) 99999-9999</p>
+                            <p>(14) 14-99738-8424</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -512,7 +512,7 @@
                             <p>Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 12h</p>
                         </div>
                     </div>
-                    <a href="https://wa.me/5511999999999" class="btn" target="_blank" style="margin-top: 20px;">
+                    <a href="https://wa.me/5514997388424" class="btn" target="_blank" style="margin-top: 20px;">
                         <i class="fab fa-whatsapp"></i> Chamar no WhatsApp Agora
                     </a>
                 </div>
@@ -554,10 +554,10 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>ToldosExpert</h3>
+                    <h3>FABRICA DAS COBERTURAS</h3>
                     <p>Especialistas em toldos e coberturas residenciais e comerciais. Proteção, conforto e qualidade para seu lar.</p>
                     <div style="margin-top:15px;">
-                        <a href="https://wa.me/5511999999999" style="color:white;font-size:1.5rem;margin-right:15px;" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/5514997388424" style="color:white;font-size:1.5rem;margin-right:15px;" target="_blank"><i class="fab fa-whatsapp"></i></a>
                         <a href="#" style="color:white;font-size:1.5rem;margin-right:15px;"><i class="fab fa-facebook"></i></a>
                         <a href="#" style="color:white;font-size:1.5rem;"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -582,7 +582,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 ToldosExpert - Todos os direitos reservados | Site otimizado para Google Ads</p>
+                <p>&copy; 2023 FABRICA DAS COBERTURAS - Todos os direitos reservados | Site otimizado para Google Ads</p>
             </div>
         </div>
     </footer>
@@ -600,7 +600,10 @@
         });
 
         // 2. Animação de Aparecimento ao Rolar (Scroll Animation)
-        const observerOptions = { threshold: 0.1 };
+        const observerOptions = { threshold: 0.15,
+                                  rootMargin: '0px 0px -100px 0px'  
+
+         };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -658,7 +661,7 @@
             const whatsappMsg = `Olá! Me chamo *${name}*. Gostaria de um orçamento para: *${service}*. \n\n${message}\n\nMeu telefone: ${phone}`;
             const encodedMsg = encodeURIComponent(whatsappMsg);
             // SUBSTITUA O NÚMERO ABAIXO PELO SEU WHATSAPP
-            window.open(`https://wa.me/5511999999999?text=${encodedMsg}`, '_blank');
+            window.open(`https://wa.me/5514997388424?text=${encodedMsg}`, '_blank');
         });
 
         // 5. Atualizar todos os links do WhatsApp com seu número (OPCIONAL)
