@@ -324,8 +324,8 @@
             .hero h1 { font-size: 2.3rem; }
             .whatsapp-btn span { display: none; }
             .whatsapp-btn { padding: 16px 20px; font-size: 1.5rem; }
-            .slides-container { flex-direction: column; }
-            .testimonial-slide { min-width: 100%; }
+            .slides-container { flex-direction: row; overflow-x: auto; scroll-snap-type: mandatory; }
+            .testimonial-slide { min-width: 85vw; }
             .slider-btn { display: none; } /* Esconde setas em mobile */
         }
         @media (max-width: 576px) {
