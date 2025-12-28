@@ -741,16 +741,97 @@
 
         /* Ajustes para telas de celular */
         @media (max-width: 768px) {
-            .logo-img {
-                height: 40px;
-                /* Tamanho um pouco menor no celular */
-                max-width: 100%;
-                /* Garante que nunca ultrapasse a tela */
+
+            /* ====== CORREÇÃO FINAL DO HEADER NO CELULAR ====== */
+            .header-container {
+                /* Garante alinhamento lado a lado */
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 12px 15px !important;
+                flex-wrap: nowrap;
+                /* IMPEDE quebra de linha entre logo e botão */
             }
 
-            /* Remove qualquer estilo antigo do texto, se ainda existir */
-            .logo-text {
+            /* Logo ocupa o espaço disponível à esquerda */
+            .logo {
+                flex: 1;
+                min-width: 0;
+                /* Permite que a logo encolha se necessário */
+                display: flex;
+                justify-content: flex-start;
+            }
+
+            /* Ajuste fino na imagem da logo se ainda estiver grande */
+            .logo-img {
+                max-height: 50px;
+                width: auto;
+            }
+
+            /* POSICIONAMENTO CORRETO DO BOTÃO (3 traços) */
+            .mobile-menu-btn {
+                order: 0;
+                /* Mantém na ordem normal (à direita) */
+                position: static;
+                /* Remove qualquer posicionamento absoluto que o tira do fluxo */
+                margin-left: 15px;
+                /* Espaço entre a logo e o botão */
+                flex-shrink: 0;
+                /* Impede que o botão encolha */
+                display: flex !important;
+                /* Força a exibição */
+                align-items: center;
+                justify-content: center;
+                width: 44px;
+                /* Tamanho de toque adequado */
+                height: 44px;
+            }
+
+            /* MENU: aparece abaixo quando aberto */
+            nav {
+                order: 3;
+                /* Vai para baixo de tudo */
+                width: 100%;
+                margin-top: 10px;
                 display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            /* Itens do menu em coluna, com espaço suficiente */
+            nav ul {
+                flex-direction: column;
+                background: white;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                padding: 10px 0;
+                width: 100%;
+            }
+
+            nav li {
+                width: 100%;
+                text-align: center;
+                padding: 14px 0;
+                border-bottom: 1px solid #f8f9fa;
+            }
+
+            nav li:last-child {
+                border-bottom: none;
+            }
+
+            /* IMPEDE que o texto "Contato" seja cortado */
+            nav a {
+                display: block;
+                padding: 0 20px;
+                white-space: nowrap;
+                /* Texto não quebra */
+                overflow: visible;
+                /* Não esconde conteúdo */
+                text-overflow: clip;
+                /* Sem "..." */
+                font-size: 1.1rem;
             }
         }
     </style>
