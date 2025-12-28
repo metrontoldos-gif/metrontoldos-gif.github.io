@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -165,7 +164,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 2px 0;
+            padding: 20px 0;
         }
 
         .logo {
@@ -732,23 +731,28 @@
         }
 
         /* Estilos para a nova logo (imagem) */
-.logo-img {
-    max-height: auto;        /* Ajuste a altura conforme necessário */
-    max-width: 100px;         /* Mantém a proporção original da imagem */
-    display: block;
-}
+        .logo-img {
+            height: auto;
+            /* Ajuste a altura conforme necessário */
+            max-width: 150px;
+            /* Mantém a proporção original da imagem */
+            display: block;
+        }
 
-/* Ajustes para telas de celular */
-@media (max-width: 768px) {
-    .logo-img {
-        height: 40px;    /* Tamanho um pouco menor no celular */
-        max-width: 100%; /* Garante que nunca ultrapasse a tela */
-    }
-    /* Remove qualquer estilo antigo do texto, se ainda existir */
-    .logo-text {
-        display: none;
-    }
-}
+        /* Ajustes para telas de celular */
+        @media (max-width: 768px) {
+            .logo-img {
+                height: 40px;
+                /* Tamanho um pouco menor no celular */
+                max-width: 100%;
+                /* Garante que nunca ultrapasse a tela */
+            }
+
+            /* Remove qualquer estilo antigo do texto, se ainda existir */
+            .logo-text {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -764,7 +768,7 @@
     <header>
         <div class="container header-container">
             <a href="#inicio" class="logo">
-                <img src="https://i.ibb.co/qM8N6mmY/Untitled-design.png" alt="Fábrica das Coberturas" class="logo-img">
+                <img src="https://i.ibb.co/wFHNY9m4/Untitled-design.jpg" alt="Fábrica das Coberturas" class="logo-img">
             </a>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
