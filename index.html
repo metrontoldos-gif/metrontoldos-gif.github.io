@@ -245,7 +245,7 @@
             .hero h1 {
                 font-size: 1.7rem;
                 /* Reduz um pouco o tamanho da fonte */
-                animation: typing 2,5s steps(17, end), blink-caret .75s step-end infinite;
+                animation: typing 2, 5s steps(17, end), blink-caret .75s step-end infinite;
                 max-width: 95vw;
                 /* Usa ainda mais da tela disponível */
             }
@@ -619,6 +619,55 @@
                 overflow: visible;
             }
 
+            /* ====== CORREÇÃO PARA HEADER COM TEXTO LONGO ====== */
+            .header-container {
+                padding: 10px 15px !important;
+                flex-direction: column;
+                /* Empilha logo E botão verticalmente */
+                align-items: center;
+            }
+
+            .logo {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+                /* Espaço entre o texto e o botão */
+                order: 1;
+            }
+
+            .logo-text {
+                font-size: 1.5rem;
+                /* Tamanho adequado para leitura */
+                white-space: normal;
+                /* Permite quebra de linha */
+                line-height: 1.3;
+                display: block;
+                /* Opcional: se quiser forçar uma quebra em um ponto específico */
+                /* Ex: "FABRICA<br>DAS COBERTURAS" no HTML ou usar JS */
+            }
+
+            /* Ajusta a tag <span> dentro do texto, se houver estilo especial */
+            .logo-text span {
+                display: inline;
+                /* Garante que fique na mesma linha do texto anterior */
+            }
+
+            .mobile-menu-btn {
+                order: 2;
+                position: static;
+                /* Remove posicionamento absoluto */
+                margin: 0;
+                /* Centraliza */
+                display: block;
+            }
+
+            nav {
+                order: 3;
+                width: 100%;
+            }
+
+            /* ====== FIM DA CORREÇÃO ====== */
+
             .slides-container {
                 /* Layout horizontal e scroll suave nativo */
                 flex-direction: row;
@@ -696,7 +745,7 @@
     <header>
         <div class="container header-container">
             <a href="#inicio" class="logo">
-                <div class="logo-text">FABRICA<span> DAS COBERTURAS</span></div>
+                <div class="logo-text">FABRICA<br> DAS COBERTURAS</div>
             </a>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
